@@ -37,5 +37,7 @@
   "Image upload failed": "فشل تحميل الصورة",
   "Image deleted successfully": "تم حذف الصورة بنجاح",
   "Delete image": "حذف الصورة",
-  "Home": "الصفحة الرئيسية"
+  "Home": "الصفحة الرئيسية",
+  "Are you absolutely sure?": "هل أنت متأكد تمامًا؟",
+  "This will permanently delete the movie": "لا يمكن التراجع عن هذا الإجراء. سيتم حذف الفيلم بشكل دائم."
 }

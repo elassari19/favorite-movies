@@ -37,5 +37,7 @@
   "Image upload failed": "Image upload failed",
   "Image deleted successfully": "Image deleted successfully",
   "Delete image": "Delete image",
-  "Home": "Home Page"
+  "Home": "Home Page",
+  "Are you absolutely sure?": "Are you absolutely sure?",
+  "This will permanently delete the movie": "This action cannot be undone. This will permanently delete the movie."
 }

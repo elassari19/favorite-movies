@@ -40,7 +40,7 @@ export const getMoviesAction = async () => {
 
     return data;
   } catch (error) {
-    return { error };
+    return [];
   }
 };
 

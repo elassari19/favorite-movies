@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { Button } from './button';
-import { X } from 'lucide-react';
 import { deleteMovieAction, revalidatePathByAction } from '../../app/api/movie';
 import toast from 'react-hot-toast';
+import { useTranslations } from 'next-intl';
+import * as DialogPrimitive from '@radix-ui/react-dialog';
 
 interface IProps {
   id: string;
@@ -12,6 +13,7 @@ interface IProps {
 }
 
 const DeleteMovie = ({ id, path }: IProps) => {
+  const t = useTranslations('');
   const deleteMovie = async () => {
     const res = await deleteMovieAction(id);
     if (res) {
@@ -23,9 +25,12 @@ const DeleteMovie = ({ id, path }: IProps) => {
     }
   };
   return (
-    <Button variant="destructive" onClick={deleteMovie}>
-      <X size={24} />
-    </Button>
+    <div className="w-full flex justify-between items-center px-4">
+      <DialogPrimitive.Close>{t('Cancel')}</DialogPrimitive.Close>
+      <Button variant="destructive" onClick={deleteMovie}>
+        {t('Delete')}
+      </Button>
+    </div>
   );
 };
 

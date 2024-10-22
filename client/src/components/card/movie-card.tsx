@@ -7,6 +7,7 @@ import { Edit, X } from 'lucide-react';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import DeleteMovie from '../ui/delete-movie';
+import { DialogPopup } from '../ui/dialog';
 
 interface IProps {
   movie: MovieData;
@@ -34,7 +35,20 @@ const MovieCard = async ({ movie }: IProps) => {
               <Edit size={24} />
             </Link>
           </Button>
-          <DeleteMovie id={movie.id} path={`${t('locale')}`} />
+          <DialogPopup
+            dialogTrigger={
+              <Button variant="destructive">
+                <X size={24} />
+              </Button>
+            }
+            dialogTitle={t('Are you absolutely sure?')}
+            dialogContent={
+              <Typography className="text-white my-4">
+                {t('This will permanently delete the movie')}
+              </Typography>
+            }
+            dialogFooter={<DeleteMovie id={movie.id} path={`${t('locale')}`} />}
+          />
         </div>
         <Typography variant="h5" heading="h2">
           {movie.description}

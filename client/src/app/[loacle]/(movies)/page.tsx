@@ -34,7 +34,7 @@ const page = async () => {
       </div>
 
       <div className="mx-2 md:mx-0 col-span-full md:col-span-10 md:col-start-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {moviesList.map((movie) => (
+        {moviesList?.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>

@@ -29,7 +29,7 @@ export default async function LocaleLayout({
       <body className={`${montserrat.className}`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
-            <main className="w-full h-screen flex flex-col items-center">
+            <main className="w-full h-screen flex flex-col items-center p-4">
               <HeaderNav />
               {children}
             </main>{' '}
